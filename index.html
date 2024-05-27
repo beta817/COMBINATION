@@ -5,21 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COMBINATION</title>
     <style>
-        .C{
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .input-wrapper {
+            margin: 0 10px;
+        }
+
+        .C {
             font-size: 50px;
+            margin: 0 5px;
+        }
+
+        input[type="number"] {
+            margin-top: 40px;
+            width: 50px; /* 조절 가능한 사이즈 */
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
     <form onsubmit="handleSubmit(event)">
-        <div>
-            <input type="number" id="n" name="n" required>
-            <span class="C">C</span>
-            <input type="number" id="r" name="r" required>
-            <br>
-            <br>
-            <input type="submit" value="Click">
+        <div class="container">
+            <div class="input-wrapper">
+                <input type="number" id="n" name="n" required>
+            </div>
+            <div class="input-wrapper">
+                <span class="C">C</span>
+            </div>
+            <div class="input-wrapper">
+                <input type="number" id="r" name="r" required>
+            </div>
         </div>
+        <input type="submit" value="Click">
     </form>
     <div id="result"></div>
     <script src="function.js"></script>
